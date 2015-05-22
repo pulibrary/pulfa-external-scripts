@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document */
+ /* Override some defaults */
+
+      a {
+          /*color: #FC8B3B;*/
+          color: #D61;
+          text-decoration: none;
+          line-height: inherit;
+          font-weight: inherit;
+        }
+        a:hover {
+          color: #555;
+          text-decoration: underline;
+        }
+
+
+      .btn-primary {
+          color: #ffffff;
+          background-color: #DD6611;
+          background-repeat: repeat-x;
+          background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#DD6611));
+          background-image: -moz-linear-gradient(top, #FC8B3B, #DD6611);
+          background-image: -ms-linear-gradient(top, #FC8B3B, #DD6611);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FC8B3B), color-stop(100%, #DD6611));
+          background-image: -webkit-linear-gradient(top, #FC8B3B, #DD6611);
+          background-image: -o-linear-gradient(top, #FC8B3B, #DD6611);
+          background-image: linear-gradient(top, #FC8B3B, #DD6611);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FC8B3B', endColorstr='#DD6611', GradientType=0);
+          filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+          border-color: #DD6611 #DD6611 #003f81;
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        }
+
+
+.nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #D61;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.form-control {
+            margin-bottom: 10px;
+          }
+
+          p.faq {
+            background-color: #eee;
+            padding: 5px;
+            border-radius: 4px;
+            -webkit-transition: background-color .2s linear;
+            -moz-transition: background-color .2s linear;
+            -o-transition: background-color .2s linear;
+            -ms-transition: background-color .2s linear;
+            transition: background-color .2s linear;
+          }
+
+          p.faq:hover{
+            background-color: #cee9f1;
+          }
+
+          p.faq-flash {
+              background-color: #eee;
+              -webkit-animation-name: demo;
+              -webkit-animation-duration: 900ms;
+              -webkit-animation-iteration-count: 1;
+              -webkit-animation-timing-function: ease-out;
+              animation-name: demo;
+              animation-duration: 900ms;
+              animation-iteration-count: 1;
+              animation-timing-function: ease-out;
+          }
+
+          @-webkit-keyframes demo {
+            0% {
+                background-color: #eee;
+            }
+            25% {
+                background-color: Yellow;
+            }
+            100% {
+                background-color: #eee;
+            }
+        }
+
+                  @keyframes demo {
+            0% {
+                background-color: #eee;
+            }
+            25% {
+                background-color: Yellow;
+            }
+            100% {
+                background-color: #eee;
+            }
+        }
+
+        .container {
+         width: 750px;
+       }
