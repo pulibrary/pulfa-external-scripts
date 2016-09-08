@@ -185,65 +185,58 @@ if(isset($_POST['send'])) {
 
 
       <script language="JavaScript">
-      jQuery( document ).ready(function() {
 
-        // check for all empty fields and make them red.
-        <?php if(isset($emailSent) && $emailSent == true) { ?>
-          jQuery( "#send" ).hide();
-          jQuery( ".control-label" ).hide();
-          jQuery( "#message" ).hide();
-          jQuery( "#subject" ).hide();
-          jQuery( "#name" ).hide();
-          jQuery( "#email" ).hide();
-        <?php } ?>
-        // remove red border around field when text is entered
+        jQuery( document ).ready(function() {
 
-        //window.onload = function(){
-        jQuery( "#subject" ).on( "change", function( event ) {
-            str = jQuery( "#subject option:selected" ).val();
-            refreshFAQs(str);
-        });
+          // check for all empty fields and make them red.
+                  // remove red border around field when text is entered
 
-        refreshFAQs("<?php echo $title; ?>");
-
-        function clearFAQs(){
-             jQuery( ".faq-set" ).empty();
-          }
-
-        function sanitize(str){
-          str = str.replace(/ /g, '_');
-          str = str.replace(/\W/g, '');
-          str = str.replace(/_/g, '+');
-          return str;
-        }
-
-        function refreshFAQs(keywords){
-          keywords = sanitize(keywords);
-
-          $.getJSON( "http://library-dev.princeton.edu/searchit/faq/" + keywords, {group_id:"1059"},function( data ) {
-            if(data.records.length > 0){
-              clearFAQs();
-
-              var items = [];
-              $.each( data.records, function( key, val ) {
-
-              items.push( "<p class='faq'><a href='" + val.url + "' target='_blank'>" + val.question + "</a></p>" );
-             });
-
-              faqset = '<h4>FAQs related to ' + jQuery( "#subject option:selected" ).text().toLowerCase() + '</h4>';
-              jQuery( ".faq-set" ).html( faqset );
-              jQuery( items.join( "" ) ).appendTo( ".faq-set" );
-
-              jQuery( ".faq" ).addClass( "faq-flash" );
-            }
-
+          //window.onload = function(){
+          jQuery( "#subject" ).on( "change", function( event ) {
+              str = jQuery( "#subject option:selected" ).val();
+              refreshFAQs(str);
           });
 
-        }
-      //});
-      });
+          refreshFAQs("Special Committee on the Structure of the University Records");
 
-  </script>
+          function clearFAQs(){
+               jQuery( ".faq-set" ).empty();
+            }
+
+          function sanitize(str){
+            str = str.replace(/ /g, '_');
+            str = str.replace(/\W/g, '');
+            str = str.replace(/_/g, '+');
+            return str;
+          }
+
+          function refreshFAQs(keywords){
+            keywords = sanitize(keywords);
+
+            $.getJSON( "http://library.princeton.edu/utils/faq/" + keywords, {group_id:"1059"},function( data ) {
+              if(data.records.length > 0){
+                clearFAQs();
+
+                var items = [];
+                $.each( data.records, function( key, val ) {
+
+                items.push( "<p class='faq'><a href='" + val.url + "' target='_blank'>" + val.question + "</a></p>" );
+               });
+
+                faqset = '<h4>FAQs related to ' + jQuery( "#subject option:selected" ).text().toLowerCase() + '</h4>';
+                jQuery( ".faq-set" ).html( faqset );
+                jQuery( items.join( "" ) ).appendTo( ".faq-set" );
+
+                jQuery( ".faq" ).addClass( "faq-flash" );
+              }
+
+            });
+
+          }
+        //});
+        });
+
+      </script>
 
     </body>
 
