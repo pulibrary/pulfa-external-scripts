@@ -98,7 +98,7 @@ if(isset($_POST['send'])) {
 
 
               <div class="row">
-                  <div class="col-xs-6" style="border-right:1px solid #EEE">
+                  <div class="<?php if($suggest) { echo 'col-xs-12'; } else { echo 'col-xs-6'; } ?>" style="border-right:1px solid #EEE">
                     <form style="padding-top: 10px; background:white;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                       <div class="form-group">
                         <label for="inputName" class="control-label">Name</label>
@@ -160,6 +160,7 @@ if(isset($_POST['send'])) {
                     </form>
 
                   </div>
+                  <?php if(!$suggest) { ?>
                   <div class="col-xs-6" style="border-right:1px solid #EEE">
                     <h4>Quick Answers</h4>
                     <p>Has your question already been answered?</p>
@@ -173,10 +174,7 @@ if(isset($_POST['send'])) {
 
                     </div>
                   </div>
-                  <div class="row">
-                    <hr/>
-                  </div>
-
+                  <?php } ?>
             </div>
           </div>
       </div>
