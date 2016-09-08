@@ -87,7 +87,7 @@ if(isset($_POST['send'])) {
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
         <!-- Latest compiled and minified JavaScript -->
-        <link href="css/override.css" rel="stylesheet" media="screen, projection" />
+        <link href="override.css" rel="stylesheet" media="screen, projection" />
 
 
     </head>
