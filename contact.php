@@ -122,7 +122,7 @@ if(isset($_POST['send'])) {
                             <option value="reproduction">Reproductions &amp; Photocopies</option>
                             <option value="permission">Rights &amp; Permissions</option>
                             <option value="access">Access</option>
-                            <option value="suggest" <?php if($suggest) { echo "selected"} ?>>Suggest a Correction</option>
+                            <option value="suggest" <?php if($suggest) { echo "selected"; } ?>>Suggest a Correction</option>
                             <option value="how much">Other</option>
                           </select>
 
