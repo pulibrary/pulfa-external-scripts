@@ -2,6 +2,66 @@
 /* CSS Document */
  /* Override some defaults */
 
+ .form-control {
+   margin-bottom: 10px;
+ }
+
+ p.faq {
+   background-color: #eee;
+   padding: 5px;
+   border-radius: 4px;
+   -webkit-transition: background-color .2s linear;
+   -moz-transition: background-color .2s linear;
+   -o-transition: background-color .2s linear;
+   -ms-transition: background-color .2s linear;
+   transition: background-color .2s linear;
+ }
+
+ p.faq:hover{
+   background-color: #cee9f1;
+ }
+
+ p.faq-flash {
+     background-color: #eee;
+     -webkit-animation-name: demo;
+     -webkit-animation-duration: 900ms;
+     -webkit-animation-iteration-count: 1;
+     -webkit-animation-timing-function: ease-out;
+     animation-name: demo;
+     animation-duration: 900ms;
+     animation-iteration-count: 1;
+     animation-timing-function: ease-out;
+ }
+
+ @-webkit-keyframes demo {
+   0% {
+       background-color: #eee;
+   }
+   25% {
+       background-color: Yellow;
+   }
+   100% {
+       background-color: #eee;
+   }
+ }
+
+         @keyframes demo {
+   0% {
+       background-color: #eee;
+   }
+   25% {
+       background-color: Yellow;
+   }
+   100% {
+       background-color: #eee;
+   }
+ }
+
+ .container {
+   width: 750px;
+ }
+
+
       a {
           /*color: #FC8B3B;*/
           color: #D61;
@@ -46,63 +106,3 @@
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
-
-.form-control {
-            margin-bottom: 10px;
-          }
-
-          p.faq {
-            background-color: #eee;
-            padding: 5px;
-            border-radius: 4px;
-            -webkit-transition: background-color .2s linear;
-            -moz-transition: background-color .2s linear;
-            -o-transition: background-color .2s linear;
-            -ms-transition: background-color .2s linear;
-            transition: background-color .2s linear;
-          }
-
-          p.faq:hover{
-            background-color: #cee9f1;
-          }
-
-          p.faq-flash {
-              background-color: #eee;
-              -webkit-animation-name: demo;
-              -webkit-animation-duration: 900ms;
-              -webkit-animation-iteration-count: 1;
-              -webkit-animation-timing-function: ease-out;
-              animation-name: demo;
-              animation-duration: 900ms;
-              animation-iteration-count: 1;
-              animation-timing-function: ease-out;
-          }
-
-          @-webkit-keyframes demo {
-            0% {
-                background-color: #eee;
-            }
-            25% {
-                background-color: Yellow;
-            }
-            100% {
-                background-color: #eee;
-            }
-        }
-
-                  @keyframes demo {
-            0% {
-                background-color: #eee;
-            }
-            25% {
-                background-color: Yellow;
-            }
-            100% {
-                background-color: #eee;
-            }
-        }
-
-        .container {
-         width: 750px;
-       }
-       
