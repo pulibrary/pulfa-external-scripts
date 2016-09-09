@@ -98,7 +98,7 @@ if(isset($_POST['send'])) {
 
 
               <div class="row">
-                  <div class="<?php if($suggest) { echo 'col-xs-12'; } else { echo 'col-xs-6'; } ?>" style="border-right:1px solid #EEE">
+                  <div class="<?php if($suggest || $emailSent == true) { echo 'col-xs-12'; } else { echo 'col-xs-6'; } ?>" style="border-right:1px solid #EEE">
                     <?php if(isset($emailSent) && $emailSent == true) { ?>
                       <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'inquiry'); ?>.</strong> We'll get back to you soon.</div>
                     <?php } else { ?>
