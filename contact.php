@@ -143,7 +143,7 @@ if(isset($_POST['send'])) {
                           <?php } ?>
 
                           <?php if(!isset($emailSent) && !isset($hasError)) { ?>
-                            <p class="help-block"><?php if($suggest) { echo "If this is not a correction, please close this window and click the &quot;Ask a Question&quot; button."; } else { echo "Please be as specific as possible." }</p>
+                            <p class="help-block"><?php if($suggest) { echo "If this is not a correction, please close this window and click the &quot;Ask a Question&quot; button."; } else { echo "Please be as specific as possible." } ?></p>
                           <?php } ?>
 
                       </div>
