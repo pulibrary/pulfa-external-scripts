@@ -19,13 +19,14 @@ if(!array_key_exists($_REQUEST['site'], $sites)){
 	exit();
 }else{
 	// clean the params
-	$to_email = $sites[$_REQUEST['site']];
 	$url = htmlentities($_REQUEST['url']);
   $title = htmlentities($_REQUEST['title']);
   $suggest = 0;
   if ($_REQUEST['suggest']=='1'){
     $suggest = 1;
+    $sites['mss'] = "mssdiv@princeton.edu";
   }
+  $to_email = $sites[$_REQUEST['site']];
 }
 
 if(isset($_POST['send'])) {
@@ -102,6 +103,9 @@ if(isset($_POST['send'])) {
                     <?php if(isset($emailSent) && $emailSent == true) { ?>
                       <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'inquiry'); ?>.</strong> We'll get back to you soon.</div>
                     <?php } else { ?>
+                    <?php if($suggest) { ?>
+                      <p>Please use this form to report errors or omissions in the description of this collection; for other types of inquires, please close this window and click on the Ask a Question button.</p>
+                    <?php } else { ?>
                     <form style="padding-top: 10px; background:white;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                       <div class="form-group">
                         <label for="inputName" class="control-label">Name</label>
@@ -134,7 +138,7 @@ if(isset($_POST['send'])) {
                       <div class="form-group">
                         <label for="question" class="control-label">Message</label>
 
-                          <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your Message"><?php if(isset($hasError) && isset($comments)) {echo $comments;} ?></textarea>
+                          <textarea id="message" name="message" class="form-control" rows="5" placeholder="<?php if($suggest) { echo "Please note such errors as misspellings, incorrect or missing dates, misidentified individuals, places, or events, mislabeled folders, misfiled papers, etc."; } else { echo "Your message."; } ?>"><?php if(isset($hasError) && isset($comments)) {echo $comments;} ?></textarea>
                           <?php if(isset($hasError)) { ?>
 
                             <p class="help-block" style="color:red;"><strong>Oops!</strong> Please check that you've filled in all the fields.</p>
