@@ -138,7 +138,7 @@ if(isset($_POST['send'])) {
                       <div class="form-group">
                         <label for="question" class="control-label">Message</label>
 
-                          <textarea id="message" name="message" class="form-control" rows="5" placeholder="<?php if($suggest) { echo "Please note such errors as misspellings, incorrect or missing dates, misidentified individuals, places, or events, mislabeled folders, misfiled papers, etc."; } else { echo "Your message."; } ?>"><?php if(isset($hasError) && isset($comments)) {echo $comments;} ?></textarea>
+                          <textarea id="message" name="message" class="form-control" rows="5" placeholder="<?php if($suggest) { echo "Please use this area to report errors or omissions in the description of this collection, which may include misspellings, incorrect or missing dates, misidentified individuals, places, or events, mislabeled folders, misfiled papers, etc."; } else { echo "Your message."; } ?>"><?php if(isset($hasError) && isset($comments)) {echo $comments;} ?></textarea>
                           <?php if(isset($hasError)) { ?>
 
                             <p class="help-block" style="color:red;"><strong>Oops!</strong> Please check that you've filled in all the fields.</p>
@@ -146,7 +146,7 @@ if(isset($_POST['send'])) {
                           <?php } ?>
 
                           <?php if(!isset($emailSent) && !isset($hasError)) { ?>
-                            <p class="help-block">Please be as specific as possible.</p>
+                            <p class="help-block">If this is not a correction, close this window and click the Ask a Question button.</p>
                           <?php } ?>
 
                       </div>
