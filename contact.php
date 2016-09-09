@@ -160,7 +160,7 @@ if(isset($_POST['send'])) {
                     </form>
                     <?php } ?>
                   </div>
-                  <?php if(!$suggest) { ?>
+                  <?php if(!$suggest && $emailSent != true) { ?>
                   <div class="col-xs-6" style="border-right:1px solid #EEE">
                     <h4>Quick Answers</h4>
                     <p>Has your question already been answered?</p>
