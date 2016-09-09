@@ -22,9 +22,9 @@ if(!array_key_exists($_REQUEST['site'], $sites)){
 	$to_email = $sites[$_REQUEST['site']];
 	$url = htmlentities($_REQUEST['url']);
   $title = htmlentities($_REQUEST['title']);
-  $suggest = false;
-  if ($_REQUEST['suggest']=='true'){
-    $suggest = true;
+  $suggest = 0;
+  if ($_REQUEST['suggest']=='1'){
+    $suggest = 1;
   }
 }
 
