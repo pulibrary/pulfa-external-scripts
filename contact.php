@@ -99,6 +99,9 @@ if(isset($_POST['send'])) {
 
               <div class="row">
                   <div class="<?php if($suggest) { echo 'col-xs-12'; } else { echo 'col-xs-6'; } ?>" style="border-right:1px solid #EEE">
+                    <?php if(isset($emailSent) && $emailSent == true) { ?>
+                      <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'inquiry'); ?>.</strong> We'll get back to you soon.</div>
+                    <?php } else { ?>
                     <form style="padding-top: 10px; background:white;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                       <div class="form-group">
                         <label for="inputName" class="control-label">Name</label>
@@ -142,10 +145,6 @@ if(isset($_POST['send'])) {
                             <p class="help-block">Please be as specific as possible.</p>
                           <?php } ?>
 
-                          <?php if(isset($emailSent) && $emailSent == true) { ?>
-                            <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'inquiry'); ?>.</strong> We'll get back to you soon.</div>
-                          <?php } ?>
-
                       </div>
 
                       <div class="form-group">
@@ -159,7 +158,7 @@ if(isset($_POST['send'])) {
                         </div>
                       </div>
                     </form>
-
+                    <?php } ?>
                   </div>
                   <?php if(!$suggest) { ?>
                   <div class="col-xs-6" style="border-right:1px solid #EEE">
