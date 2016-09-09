@@ -154,6 +154,7 @@ if(isset($_POST['send'])) {
                           <input type="hidden" name="site" value="<?php echo $_REQUEST['site']?>">
                           <input type="hidden" name="url" value="<?php echo $url; ?>">
                           <input type="hidden" name="title" value="<?php echo $title; ?>">
+                          <input type="hidden" name="suggest" value="<?php echo $suggest; ?>">
                           <button type="submit" name="send" id="send" class="btn btn-default pull-right">Send</button>
                         </div>
                       </div>
