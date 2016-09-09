@@ -106,3 +106,7 @@
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
+
+.alert-success {
+   margin-top: 20px;
+}
