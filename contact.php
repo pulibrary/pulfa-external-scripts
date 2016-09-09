@@ -105,7 +105,7 @@ if(isset($_POST['send'])) {
                     <?php } else { ?>
                     <?php if($suggest) { ?>
                       <p>Please use this form to report errors or omissions in the description of this collection; for other types of inquires, please close this window and click on the Ask a Question button.</p>
-                    <?php } else { ?>
+                    <?php } ?>
                     <form style="padding-top: 10px; background:white;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                       <div class="form-group">
                         <label for="inputName" class="control-label">Name</label>
