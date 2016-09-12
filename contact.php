@@ -71,7 +71,10 @@ if(isset($_POST['send'])) {
     if(!isset($hasError)) {
         $emailTo = $to_email;
         $body = "Name: $name \n\nEmail: $email \n\nSubject: $subject \n\nComments:\n $comments \n\nContext:\n $context";
-        $headers = "From: " . $name . " <" . $email . ">" . "\r\n" . "Reply-To: " . $email;
+        // $headers = "From: " . $name . " <" . $email . ">" . "\r\n" . "Reply-To: " . $email;
+        $headers = 'From: lsupport@princeton.edu' . "\r\n" .
+                    'Reply-To: lsupport@princeton.edu' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
 
         mail($emailTo, $subject, $body, $headers);
         $emailSent = true;
