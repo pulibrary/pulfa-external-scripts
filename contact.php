@@ -65,15 +65,20 @@ if(isset($_POST['send'])) {
     $boxnum = trim($_POST['boxnum']);
 
     if(isset($_POST['boxnum']) && $boxnum != '') {
-      $context = $context + '\n\nBox/Container Number:\n' + $boxnum;
+      $context = $context . "\n\nBox/Container Number:\n" . $boxnum;
     }
 
     if(!isset($hasError)) {
         $emailTo = $to_email;
         $body = "Name: $name \n\nEmail: $email \n\nSubject: $subject \n\nComments:\n $comments \n\nContext:\n $context";
         // $headers = "From: " . $name . " <" . $email . ">" . "\r\n" . "Reply-To: " . $email;
+        /*
         $headers = 'From: lsupport@princeton.edu' . "\r\n" .
                     'Reply-To: lsupport@princeton.edu' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
+        */
+        $headers = 'From:' . $email . "\r\n" .
+                    'Reply-To:' . $email . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
 
         mail($emailTo, $subject, $body, $headers);
