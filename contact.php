@@ -124,7 +124,7 @@ if(isset($_POST['send'])) {
 
 
                       <div class="form-group">
-                        <?php if($suggest) {
+                        <?php if($suggest) { ?>
                             <label for="inputBoxNum" class="control-label">Box/Container Number</label>
                             <input type="text" class="form-control" id="boxnum" name="boxnum" placeholder="#" value="<?php if(isset($hasError) && isset($boxnum)) {echo $boxnum;} ?>">
                             <input type="hidden" name="subject" value="Suggest a Correction">
