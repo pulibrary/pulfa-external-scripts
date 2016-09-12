@@ -62,6 +62,11 @@ if(isset($_POST['send'])) {
     }
 
     $context = $_POST['context'];
+    $boxnum = trim($_POST['boxnum']);
+
+    if(isset($_POST['boxnum']) && $boxnum != '') {
+      $context = $context + '\n\nBox/Container Number:\n' + $boxnum;
+    }
 
     if(!isset($hasError)) {
         $emailTo = $to_email;
@@ -119,17 +124,21 @@ if(isset($_POST['send'])) {
 
 
                       <div class="form-group">
-                        <label for="inputSubject" class="control-label">Subject</label>
+                        <?php if($suggest) {
+                            <label for="inputBoxNum" class="control-label">Box/Container Number</label>
+                            <input type="text" class="form-control" id="boxnum" name="boxnum" placeholder="#" value="<?php if(isset($hasError) && isset($boxnum)) {echo $boxnum;} ?>">
+                            <input type="hidden" name="subject" value="Suggest a Correction">
+                        <?php } else { ?>
+                          <label for="inputSubject" class="control-label">Subject</label>
 
-                          <select id="subject" name="subject" class="form-control">
-                            <option value="<?php echo $title; ?>">This Collection</option>
-                            <option value="reproduction">Reproductions &amp; Photocopies</option>
-                            <option value="permission">Rights &amp; Permissions</option>
-                            <option value="access">Access</option>
-                            <option value="suggest" <?php if($suggest) { echo "selected"; } ?>>Suggest a Correction</option>
-                            <option value="how much">Other</option>
-                          </select>
-
+                            <select id="subject" name="subject" class="form-control">
+                              <option value="<?php echo $title; ?>">This Collection</option>
+                              <option value="reproduction">Reproductions &amp; Photocopies</option>
+                              <option value="permission">Rights &amp; Permissions</option>
+                              <option value="access">Access</option>
+                              <option value="how much">Other</option>
+                            </select>
+                        <?php } ?>
                       </div>
 
                       <div class="form-group">
