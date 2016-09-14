@@ -25,6 +25,9 @@ if(!array_key_exists($_REQUEST['site'], $sites)){
   if ($_REQUEST['suggest']=='1'){
     $suggest = 1;
     $sites['mss'] = "mssdiv@princeton.edu";
+    $sites['mudd'] = "mudd@princeton.libanswers.com";
+    $sites['publicpolicy'] = "mudd@princeton.libanswers.com";
+    $sites['univarchives'] = "mudd@princeton.libanswers.com";
   }
   $to_email = $sites[$_REQUEST['site']];
 }
@@ -114,7 +117,7 @@ if(isset($_POST['send'])) {
               <div class="row">
                   <div class="<?php if($suggest || $emailSent == true) { echo 'col-xs-12'; } else { echo 'col-xs-6'; } ?>" style="border-right:1px solid #EEE">
                     <?php if(isset($emailSent) && $emailSent == true) { ?>
-                      <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'inquiry'); ?>.</strong> We'll get back to you soon.</div>
+                      <div class="alert alert-success"><strong>Thank you for your <?php echo ($_REQUEST['site']=='feedback' ? 'feedback' : 'submission'); ?>.</strong> <?php if(!$suggest){ echo "We'll get back to you soon."; } ?></div>
                     <?php } else { ?>
                     <form style="padding-top: 10px; background:white;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                       <div class="form-group">
