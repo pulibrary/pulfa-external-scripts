@@ -98,10 +98,10 @@ if(isset($_POST['send'])) {
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="//api2.libanswers.com/1.0/widgets/850"></script>
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
         <!-- Latest compiled and minified JavaScript -->
         <link href="override.css" rel="stylesheet" media="screen, projection" />
