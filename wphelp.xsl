@@ -29,10 +29,10 @@
                 <!--[if IE]>
                     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
                     <![endif]-->
-                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">#</script>
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">#</script>
                 <script type="text/javascript" src="bootstrap-tab.js">#</script>
-                <link href="css/bootstrap.css" rel="stylesheet" media="screen, projection" />
-                <link href="css/override.css" rel="stylesheet" media="screen, projection" />
+                <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+                <link href="override.css" rel="stylesheet" media="screen, projection" />
             </head>
             <body>
                 <div style="float:left;width:190px;margin-top:10px;">
