@@ -189,9 +189,9 @@ if(isset($_POST['send'])) {
 
                     <div class="faq-set" style="padding-top: 10px;">
 
-                      <p class="faq"><a href="http://faq.library.princeton.edu/rbsc/faq/26972" target="_blank">How can I access Princeton University Library special collections?</a></p>
-                      <p class="faq"><a href="http://faq.library.princeton.edu/rbsc/faq/64876" target="_blank">How can I purchase copies from rare books and special collections?</a></p>
-                      <p class="faq"><a href="http://faq.library.princeton.edu/rbsc/faq/56766" target="_blank">Do I need permission to quote or publish from rare books and special collections?</a></p>
+                      <p class="faq"><a href="https://faq.library.princeton.edu/rbsc/faq/26972" target="_blank">How can I access Princeton University Library special collections?</a></p>
+                      <p class="faq"><a href="https://faq.library.princeton.edu/rbsc/faq/64876" target="_blank">How can I purchase copies from rare books and special collections?</a></p>
+                      <p class="faq"><a href="https://faq.library.princeton.edu/rbsc/faq/56766" target="_blank">Do I need permission to quote or publish from rare books and special collections?</a></p>
 
                     </div>
                   </div>
@@ -232,7 +232,7 @@ if(isset($_POST['send'])) {
           function refreshFAQs(keywords){
             keywords = sanitize(keywords);
 
-            $.getJSON( "http://library.princeton.edu/utils/faq/" + keywords, {group_id:"1059"},function( data ) {
+            $.getJSON( "https://library.princeton.edu/utils/faq/" + keywords, {group_id:"1059"},function( data ) {
               if(data.records.length > 0){
                 clearFAQs();
 
