@@ -16,7 +16,7 @@ function download_page($path){
 }
 
 # LOAD XML FILE
-$doc = 'https://blogs.princeton.edu/research-account/category/' . $_GET['tag'] . '/feed/';
+$doc = 'https://blogs.princeton.edu/research-account/tag/' . $_GET['tag'] . '/feed/';
 $XML = new DOMDocument();	
 $XML->loadXML( download_page($doc) );
 
