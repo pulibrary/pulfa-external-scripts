@@ -1,4 +1,6 @@
 <?php 
+phpinfo();
+exit();
 session_start(); 
 
 function download_page($path){
