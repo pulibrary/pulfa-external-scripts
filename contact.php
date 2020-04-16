@@ -25,6 +25,12 @@ if(!array_key_exists($_REQUEST['site'], $sites)){
   if ($_REQUEST['suggest']=='1'){
     $suggest = 1;
     $sites['mss'] = "mssdiv@princeton.edu";
+    $sites['cotsen'] = "mssdiv@princeton.edu";
+    $sites['eng'] = "mssdiv@princeton.edu";
+    $sites['lae'] = "mssdiv@princeton.edu";
+    $sites['ga'] = "mssdiv@princeton.edu";
+    $sites['rarebooks'] = "mssdiv@princeton.edu";
+    $sites['selectors'] = "mssdiv@princeton.edu";
     $sites['mudd'] = "muddts@princeton.edu";
     $sites['publicpolicy'] = "muddts@princeton.edu";
     $sites['univarchives'] = "muddts@princeton.edu";
